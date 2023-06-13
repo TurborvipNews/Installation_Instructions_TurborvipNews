@@ -1,6 +1,6 @@
 # Wellcome to install system webnews by turborvip :game_die:
 
-### Following are the steps to install the project
+### Following are the steps to install the system
 
 1. Create an **empty** folder on your computer and name is **NewsProject**
 2. Clone :
