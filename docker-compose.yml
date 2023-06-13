@@ -1,0 +1,25 @@
+version: '3' 
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_8.0
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./database_repo:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: abc123
+      MYSQL_DATABASE: turborvip_news
+      MYSQL_USER: turborvip
+      MYSQL_PASSWORD: 123456a
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - turborvip_net
+
+networks:
+  turborvip_net:
